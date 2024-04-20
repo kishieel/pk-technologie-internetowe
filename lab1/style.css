@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.header,
+.footer {
+    background-color: #f5f5dc;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+}
+
+.header > h1,
+.footer > h3 {
+    text-align: center;
+}
+
+.main {
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+
+.navigation {
+    background-color: #a52a2a;
+    padding: 0.75rem;
+}
+
+.navigation > nav > div:nth-child(1) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #ffffff;
+    width: 110px;
+    height: 110px;
+    margin: auto auto 1.5rem;
+}
+
+.navigation > nav > div:nth-child(2) {
+    margin-bottom: 1.5rem;
+}
+
+.navigation > nav > div:nth-child(2) > svg {
+    display: block;
+    margin: auto auto 1rem;
+}
+
+.navigation > nav > div:nth-child(2) > svg:hover {
+    cursor: pointer;
+}
+
+.navigation > nav > div:nth-child(2) > svg:hover + div {
+    height: auto;
+    max-height: 200px;
+}
+
+.navigation > nav > div:nth-child(2) > div {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s;
+}
+
+.navigation > nav > div:nth-child(2) > div:hover {
+    max-height: 200px;
+}
+
+.navigation > nav > div:nth-child(2) > div > ul {
+    list-style-type: none;
+    background-color: #ffe4c4;
+    border-radius: 12px;
+    padding: 0.75rem;
+}
+
+.navigation > nav > div:nth-child(2) > div > ul > li {
+    margin-bottom: 0.5rem;
+    background-color: #602323;
+    border-radius: 12px;
+    text-align: center;
+    padding: 0.125rem;
+}
+
+.navigation > nav > div:nth-child(2) > div > ul > li > a {
+    text-decoration: none;
+    color: gray;
+    display: block;
+}
+
+.navigation > nav > div:nth-child(2) > div > ul > li:hover {
+    background-color: gray;
+    cursor: pointer;
+}
+
+.navigation > nav > div:nth-child(2) > div > ul > li:hover > a {
+    color: black;
+}
+
+.navigation > nav > div:nth-child(3),
+.navigation > nav > div:nth-child(4) {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.calculator {
+    padding: 2rem;
+}
+
+.calculator > * {
+    margin-bottom: 1rem;
+}
+
+.calculator table,
+.calculator th,
+.calculator td {
+    padding: 0.25rem;
+    border: 1px solid black;
+    border-collapse: collapse;
+    outline: none;
+}
+
+#additionFormHTML,
+#divisionFormHTML,
+#quadraticFormHTML {
+    display: none;
+}
+
+.articles > article {
+    padding: 2rem;
+}
+
+.articles > article > h1 {
+    margin-bottom: 1.5rem;
+}
+
+.articles > hr {
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+@media only screen and (min-width: 600px) {
+    .main {
+        display: flex;
+    }
+
+    .navigation {
+        width: 200px;
+        flex-shrink: 0;
+    }
+
+    .navigation > nav > div:nth-child(2) > svg {
+        display: none;
+    }
+
+    .navigation > nav > div:nth-child(2) > div {
+        max-height: 200px;
+    }
+
+    .navigation > nav > div:nth-child(3),
+    .navigation > nav > div:nth-child(4) {
+        justify-content: start;
+    }
+}

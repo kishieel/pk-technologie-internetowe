@@ -1,0 +1,42 @@
+<section class="calculator">
+    <p>Mathematical Operation:</p>
+    <input id="additionHTML" type="radio" name="operation" value="addition">
+    <label for="additionHTML">(+) Addition</label><br>
+    <div id="additionFormHTML">
+        <input id="additionXHTML" name="additionXHTML" type="number" placeholder="X" required/>
+        +
+        <input id="additionYHTML" name="additionYHTML" type="number" placeholder="Y" required/>
+    </div>
+    <input id="divisionHTML" type="radio" name="operation" value="division">
+    <label for="divisionHTML">(/) Division</label><br>
+    <div id="divisionFormHTML">
+        <input id="divisionXHTML" name="divisionXHTML" type="number" placeholder="X" required/>
+        /
+        <input id="divisionYHTML" name="divisionYHTML" type="number" placeholder="Y" required/>
+    </div>
+    <input id="quadraticHTML" type="radio" name="operation" value="quadratic">
+    <label for="quadraticHTML">(ax^2 + bx + c) Quadratic equation roots</label><br>
+    <div id="quadraticFormHTML">
+        <input id="quadraticAHTML" name="quadraticAHTML" type="number" placeholder="a" required/>
+        x^2 +
+        <input id="quadraticBHTML" name="quadraticBHTML" type="number" placeholder="b" required/>
+        x +
+        <input id="quadraticCHTML" name="quadraticCHTML" type="number" placeholder="c" required/>
+    </div>
+    <button id="calculateHTML">Calculate</button>
+    <hr>
+    <button id="clearHTML">Clear</button>
+    <p>List of results</p>
+    <table id="tableHTML">
+        <thead>
+        <tr>
+            <th>ID.</th>
+            <th>Operation</th>
+            <th colspan="2">X</th>
+        </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</section>
+

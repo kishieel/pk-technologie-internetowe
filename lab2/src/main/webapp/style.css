@@ -1,0 +1,215 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    --header-footer-color: #f5f5dc;
+    --navigation-color: #a52a2a;
+    --ul-color: #ffe4c4;
+    --li-color: #602323;
+    --nav-form-color: #ffe4c4;
+}
+
+body.dark {
+    background-color: #1e1e1e;
+    color: #828080;
+    --header-footer-color: #464646;
+    --navigation-color: #464646;
+    --ul-color: #656565;
+    --li-color: #000000;
+    --nav-form-color: #656565;
+}
+
+.header,
+.footer {
+    background-color: var(--header-footer-color);
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+}
+
+.header > h1,
+.footer > h3 {
+    text-align: center;
+}
+
+.main {
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+
+.navigation {
+    background-color: var(--navigation-color);
+    padding: 0.75rem;
+}
+
+.navigation > nav > div:nth-child(1) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #ffffff;
+    width: 110px;
+    height: 110px;
+    margin: auto auto 1.5rem;
+}
+
+.navigation > nav > div:nth-child(2) {
+    margin-bottom: 1.5rem;
+}
+
+.navigation > nav > div:nth-child(2) > svg {
+    display: block;
+    margin: auto auto 1rem;
+}
+
+.navigation > nav > div:nth-child(2) > svg:hover {
+    cursor: pointer;
+}
+
+.navigation > nav > div:nth-child(2) > svg:hover + div {
+    height: auto;
+    max-height: 200px;
+}
+
+.navigation > nav > div:nth-child(2) > div {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s;
+}
+
+.navigation > nav > div:nth-child(2) > div:hover {
+    max-height: 200px;
+}
+
+.navigation > nav > div:nth-child(2) > div > ul {
+    list-style-type: none;
+    background-color: var(--ul-color);
+    border-radius: 12px;
+    padding: 0.75rem;
+}
+
+.navigation > nav > div:nth-child(2) > div > ul > li {
+    margin-bottom: 0.5rem;
+    background-color: var(--li-color);
+    border-radius: 12px;
+    text-align: center;
+    padding: 0.125rem;
+}
+
+.navigation > nav > div:nth-child(2) > div > ul > li > a {
+    text-decoration: none;
+    color: gray;
+    display: block;
+}
+
+.navigation > nav > div:nth-child(2) > div > ul > li:hover {
+    background-color: gray;
+    cursor: pointer;
+}
+
+.navigation > nav > div:nth-child(2) > div > ul > li:hover > a {
+    color: black;
+}
+
+.navigation > nav > div:nth-child(3) {
+    margin-bottom: 1rem;
+}
+
+.navigation > nav > div > form {
+    background-color: var(--nav-form-color);
+    border-radius: 12px;
+    padding: 0.5rem;
+}
+
+.navigation > nav > div > form > * {
+    margin-bottom: 0.5rem;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.navigation > nav > div:nth-child(4),
+.navigation > nav > div:nth-child(5) {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.calculator {
+    padding: 2rem;
+}
+
+.calculator > * {
+    margin-bottom: 1rem;
+}
+
+.calculator table,
+.calculator th,
+.calculator td {
+    padding: 0.25rem;
+    border: 1px solid black;
+    border-collapse: collapse;
+    outline: none;
+}
+
+#additionFormHTML,
+#divisionFormHTML,
+#quadraticFormHTML {
+    display: none;
+}
+
+.articles > article {
+    padding: 2rem;
+}
+
+.articles > article > h1 {
+    margin-bottom: 1.5rem;
+}
+
+.articles > hr {
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.login-failed {
+    color: red;
+}
+
+.home {
+    margin: 2rem;
+    width: 100%;
+}
+
+.home > hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.home > form > h3 {
+    margin-bottom: 1rem;
+}
+
+@media only screen and (min-width: 600px) {
+    .main {
+        display: flex;
+    }
+
+    .navigation {
+        width: 200px;
+        flex-shrink: 0;
+    }
+
+    .navigation > nav > div:nth-child(2) > svg {
+        display: none;
+    }
+
+    .navigation > nav > div:nth-child(2) > div {
+        max-height: 200px;
+    }
+
+    .navigation > nav > div:nth-child(4),
+    .navigation > nav > div:nth-child(5) {
+        justify-content: start;
+    }
+}
